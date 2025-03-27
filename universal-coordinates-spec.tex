@@ -2,6 +2,15 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{fullpage}
 \usepackage{enumitem}
+
+% Define theorem-like environments
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+
 \begin{document}
 
 \begin{center}
@@ -30,11 +39,11 @@ The development adheres to a meticulous level of detail and precise notation app
 
 We begin by outlining the fundamental assumptions and definitions of the \textit{Prime Framework}, which grounds the construction of the Universal Coordinate System. These first principles pertain to the basic properties of natural numbers and the role of prime numbers as indivisible units:
 
-\begin{itemize}[label={\bf Axiom \arabic*:}, leftmargin=3em]
+\begin{enumerate}[label={\bf Axiom \arabic*:}, leftmargin=3em]
  \item \textbf{Well-Ordering Axiom:} Every non-empty subset of the natural numbers $\mathbb{N}$ has a least element. Equivalently, the principle of mathematical induction holds for $\mathbb{N} = \{1,2,3,\dots\}$. This axiom underpins proofs by induction and guarantees that descending chains of positive integers terminate.
  \item \textbf{Multiplicative Identity Axiom:} There exists a multiplicative identity in $\mathbb{N}$, denoted $1$, such that for any $n \in \mathbb{N}$, $1 \cdot n = n$. By convention, $1$ is neither prime nor composite (it serves as a neutral unit element).
  \item \textbf{Prime Existence Axiom:} The set of natural numbers greater than $1$ is not empty, and at least one such number has no divisors other than $1$ and itself. In other words, there exists at least one prime number. (Indeed, $2$ is an example of an initial prime.)
-\end{itemize}
+\end{enumerate}
 
 Using these axioms, we define the central concept of primality that will act as the building block for the coordinate system:
 
@@ -96,7 +105,7 @@ This iterative cancellation will continue as long as there are any prime factors
 Another way to see the uniqueness argument is through \emph{minimal counterexample}: assume a smallest integer $n$ with two different prime factorizations. The above reasoning shows that the smallest prime factor of $n$ must appear in both factorizations, so after removing it we get a smaller number that still has two distinct factorizations, contradicting the minimality of $n$. This contradiction establishes uniqueness.
 \end{proof}
 
-The Fundamental Theorem of Arithmetic (\Theorem \ref{thm:FTA}) confirms that prime numbers indeed serve as the \emph{building blocks} for all natural numbers. Every $n>1$ can be decomposed into primes in a unique way. These primes and their exponents in $n$ will form the coordinates of $n$ in our universal system. We emphasize that the proof above was carried out using only the fundamental axioms and logical principles (well-ordering/induction and basic divisor properties), illustrating a derivation "from first principles" in the spirit of the Prime Framework.
+The Fundamental Theorem of Arithmetic (theorem \ref{thm:FTA}) confirms that prime numbers indeed serve as the \emph{building blocks} for all natural numbers. Every $n>1$ can be decomposed into primes in a unique way. These primes and their exponents in $n$ will form the coordinates of $n$ in our universal system. We emphasize that the proof above was carried out using only the fundamental axioms and logical principles (well-ordering/induction and basic divisor properties), illustrating a derivation "from first principles" in the spirit of the Prime Framework.
 
 \section{Universal Coordinates and Universal Number Notation}
 
